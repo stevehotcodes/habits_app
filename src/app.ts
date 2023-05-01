@@ -3,56 +3,67 @@
  interface Habits{
       habitname:string;
       habitImage:string;
-      habitStoppedDay:number;
-      habitStoppedMonth:number;
-      habitStoppedYear:number;
-      monthDiff:number;
-      yearDiff:number;
+      habitStopppedDate:string;
+    
+      
  }
+
 
  class HabitClass{
     async fetchHabits() {
-        const response=await fetch('http://localhost:3000/habits')
-        const habititem= await response.json() as Habits[];
-        const habitDiv =document.querySelector(".habits-display") as HTMLDivElement;
+        let response=await fetch('http://localhost:3000/habits')
+        let habititem= await response.json() as Habits[];
+        let habitDiv =document.querySelector(".habits-display") as HTMLDivElement;
+        const today = new Date();
+         
         let htmlDisplay =""
         for(let i=0;i<habititem.length;i++){
+            let d=1000*60*60*24;
+            //calculating the calculating the 
+            const streakDiff=(Math.floor((new Date().getTime()-new Date(habititem[i].habitStopppedDate).getTime())/d));
+           
                 if(habititem[i]){
                 // console.log(habititem[i].habitname)
                 htmlDisplay +=`<div class="habit-item">
                 <h3 class="habit-name">${habititem[i].habitname} </h3>
                  <img src="${habititem[i].habitImage}" alt=""  class="habit-image">
-                <p class="date-stopped">Day:
-                ${habititem[i].habitStoppedDay}</p>hab
-                <p class="month-stopped">Month stopped: ${habititem[i].habitStoppedMonth}</p>
-                <p class="year-stopped"> Year:${habititem[i].habitStoppedYear}</p>
+                <p class="date-stopped">Date-stopped:${habititem[i].habitStopppedDate}
+                </p>    
+                                   
+                <div class="streak">Streak:${streakDiff} days<p></p>
                 
-                
-                <div class="streak">Streak:</div>
-        
+
+                </div>
+            
             </div>`
-             
-
-          
+            
             }   
-
+            
+            habitDiv.innerHTML=htmlDisplay;
+            
         }
+        
        
-
-        }
+    }
+    //    async delHabit(i){
+    //         let response=await fetch(`http://localhost:3000/habits/${id}`,{
+    //              method:'DELETE'
+    //         })
+            
+    //     }
        
-        async addHabitData () {
+        async addHabitData() {
             const newHabitName=document.querySelector("#habit-name") as HTMLInputElement;
+            const newhabitImage=document.querySelector("#habit-image") as HTMLInputElement
+            const newhabitDateStopped=document.querySelector("#date-stopped") as HTMLInputElement;
             // console.log(newHabit.value)
-            const newHabitStoppedDay=document.querySelector("#day-stopped") as HTMLInputElement
-            const newHabitStoppedMonth=document.querySelector("#month-stopped") as HTMLInputElement
-            const newHabitStoppedYear=document.querySelector("#year-stopped") as HTMLInputElement
+        
             
             let habitDetails={ 
                 "habitname":newHabitName.value,
-                 "habitStoppedDay": newHabitStoppedDay.value,
-                 "habitStoppedMonth":newHabitStoppedMonth.value,
-                 "habitStoppedYear": newHabitStoppedYear.value
+                "habitImage": newhabitImage.value,
+                "habitStopppedDate": newhabitDateStopped.value
+                 
             }
             await fetch("http://localhost:3000/habits" ,{
                 method:"POST",
@@ -61,10 +72,14 @@
             })
             
         }
+
+       
+        
+        
         
  }  
  const btn=document.querySelector("#submit");
- btn?.addEventListener('click', ()=>{
+ btn?.addEventListener('click',()=>{
     new HabitClass().addHabitData();
  });
 
