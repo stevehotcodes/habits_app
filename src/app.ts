@@ -6,6 +6,8 @@
       habitStoppedDay:number;
       habitStoppedMonth:number;
       habitStoppedYear:number;
+      monthDiff:number;
+      yearDiff:number;
  }
 
  class HabitClass{
@@ -21,22 +23,24 @@
                 <h3 class="habit-name">${habititem[i].habitname} </h3>
                  <img src="${habititem[i].habitImage}" alt=""  class="habit-image">
                 <p class="date-stopped">Day:
-                ${habititem[i].habitStoppedDay}</p>
+                ${habititem[i].habitStoppedDay}</p>hab
                 <p class="month-stopped">Month stopped: ${habititem[i].habitStoppedMonth}</p>
                 <p class="year-stopped"> Year:${habititem[i].habitStoppedYear}</p>
-                <p class="streak">No of days/Streak:</p>
+                
+                
+                <div class="streak">Streak:</div>
         
             </div>`
-            // let dayStreak:number=  new Date().getDay
-            }
-            
-         
+             
+
+          
+            }   
 
         }
-        
-        habitDiv.innerHTML=htmlDisplay
+       
 
         }
+       
         async addHabitData () {
             const newHabitName=document.querySelector("#habit-name") as HTMLInputElement;
             // console.log(newHabit.value)
@@ -69,4 +73,9 @@
  new HabitClass().fetchHabits();
 //  new  HabitClass().addHabitData();
 
- 
+
+
+// console.log(yearDiff,monthDiff,dateDiff);
+// const streakArray=[yearDiff,monthDiff,dateDiff];
+
+         

@@ -26,13 +26,18 @@ class HabitClass {
                 ${habititem[i].habitStoppedDay}</p>
                 <p class="month-stopped">Month stopped: ${habititem[i].habitStoppedMonth}</p>
                 <p class="year-stopped"> Year:${habititem[i].habitStoppedYear}</p>
-                <p class="streak">No of days/Streak:</p>
+                
+                <p class="streak">Streak:</p>
         
             </div>`;
                     // let dayStreak:number=  new Date().getDay
                 }
             }
             habitDiv.innerHTML = htmlDisplay;
+        });
+    }
+    habitStreak() {
+        return __awaiter(this, void 0, void 0, function* () {
         });
     }
     addHabitData() {
@@ -62,3 +67,7 @@ btn === null || btn === void 0 ? void 0 : btn.addEventListener('click', () => {
 });
 new HabitClass().fetchHabits();
 //  new  HabitClass().addHabitData();
+const dateObject = Date.now();
+console.log(dateObject);
+// console.log(yearDiff,monthDiff,dateDiff);
+// const streakArray=[yearDiff,monthDiff,dateDiff];
