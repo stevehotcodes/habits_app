@@ -7,23 +7,30 @@
     <title>Habitual app</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-        <div class="habit-form"><h1>Welcome to My Streak App</h1></div>
+<body> 
+
+    <div class="main-container">
+        
+        
         <div class="form-container">
+            <h1>My Streak App</h1>
             <form action=""id="streak-form">
-                <label for="habit-name">Habit</label>
-                <input type="text" id="habit name">
-                <label for="time"> Day Stopped</label>
+                <label for="habit-name"> Name of the Habit</label>
+                <input type="text" id="habit-name">
+                <label for="habit-image">Habit Image</label>
+                <input type="text" id="habit-image">
+                <label for="time"> When did you stop the habit ?(Day)</label>
                 <input type="text" id="day-stopped">
                 <label for="time"> Month Stopped</label>
                 <input type="text" id="month-stopped">
                 <label for="time"> Year Stopped</label>
                 <input type="text" id="year-stopped">
-                <input type="button" value="submit">
+                <input type="button" value="submit" id="submit">
             </form>
         </div>
-         <h2>Habits and Streak</h2>
+        
         <div class="habits-display">
+            <h2>Habits and Streak</h2>
              <!-- <div class="habit-item">
                 <h3 class="habit-name"></h3>
                 <img src="" alt=""  class="habit-image"> -->
@@ -32,8 +39,8 @@
                 <p class="year-stopped"></p> -->
 
              <!-- </div> --> 
-
-        </div>
+         </div>
+</div>
     <script src="./dist/app.js"></script>
 </body>
 </html>

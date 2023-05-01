@@ -12,7 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 class HabitClass {
     fetchHabits() {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield fetch(' http://localhost:3000/habits');
+            const response = yield fetch('http://localhost:3000/habits');
             const habititem = yield response.json();
             const habitDiv = document.querySelector(".habits-display");
             let htmlDisplay = "";
@@ -21,7 +21,7 @@ class HabitClass {
                     // console.log(habititem[i].habitname)
                     htmlDisplay += `<div class="habit-item">
                 <h3 class="habit-name">${habititem[i].habitname} </h3>
-                <!-- <img src="" alt=""  class="habit-image"> -->
+                 <img src="${habititem[i].habitImage}" alt=""  class="habit-image">
                 <p class="date-stopped">Day:
                 ${habititem[i].habitStoppedDay}</p>
                 <p class="month-stopped">Month stopped: ${habititem[i].habitStoppedMonth}</p>
@@ -29,10 +29,36 @@ class HabitClass {
                 <p class="streak">No of days/Streak:</p>
         
             </div>`;
+                    // let dayStreak:number=  new Date().getDay
                 }
             }
             habitDiv.innerHTML = htmlDisplay;
         });
     }
+    addHabitData() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const newHabitName = document.querySelector("#habit-name");
+            // console.log(newHabit.value)
+            const newHabitStoppedDay = document.querySelector("#day-stopped");
+            const newHabitStoppedMonth = document.querySelector("#month-stopped");
+            const newHabitStoppedYear = document.querySelector("#year-stopped");
+            let habitDetails = {
+                "habitname": newHabitName.value,
+                "habitStoppedDay": newHabitStoppedDay.value,
+                "habitStoppedMonth": newHabitStoppedMonth.value,
+                "habitStoppedYear": newHabitStoppedYear.value
+            };
+            yield fetch("http://localhost:3000/habits", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(habitDetails)
+            });
+        });
+    }
 }
+const btn = document.querySelector("#submit");
+btn === null || btn === void 0 ? void 0 : btn.addEventListener('click', () => {
+    new HabitClass().addHabitData();
+});
 new HabitClass().fetchHabits();
+//  new  HabitClass().addHabitData();

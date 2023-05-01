@@ -1,4 +1,4 @@
-.habit-form{
+/* .habit-form{
     width:100%;
     color:white;
     height:5rem;
@@ -6,40 +6,85 @@
     justify-content: center;
     align-items: center;
     background-color: orange;
+} */
+.main-container{
+    border: 2px solid #2a2A29;
+    display: flex;
+    width: 100%;
+    /* flex-direction: column; */
 }
+
 .form-container{
     display:flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
     border:2px solid black;
     border-radius: 10px;
-    margin: 0 auto;
-    width:70%;
-    height:300px;
-    margin-top: 1em;
+    width: 50%;
+    background-color: #f5f5f5;
+    /* margin: 0 auto; */
+    /* width:50%; */
+    /* height:300px; */
+    /* margin-top: 1em; */
 }
-h1{
+
+
+ form{
+    /* margin: 20px;
+     */
+     border:2px solid #fff;
+     box-shadow:5px 5px 2px 2px #505050;
+     display: flex;
+     flex-direction: column;
+     width: 90%;
+     /* background-color: whitesmoke; */
+     height:70%;
+     font-size: 20px;
+     border-radius: 30px;
+} 
+label,input{
+    text-align: center;
+    font-size:2rem;
+}
+input{
+    border:none;
+    width:90%;
+    margin: auto;
+    height: 2.5rem;
+    outline: none;
+    /* border-bottom:2px solid gray; */
+    border-radius: 20px;
+    box-shadow:2px 2px blue;
+}
+#submit{
     color:white;
-}
-form{
+    background-color: blue;
     margin: 20px;
+    /* width:  */
 }
 .habits-display{
-    border:2px solid yellowgreen;
+    /* border:2px solid yellowgreen; */
     background-color: #f5f5f5;
     border-radius: 2px;
     /* width:100%; */
     /* height:100vh; */
     display: flex;
-     flex-direction: column; 
+    flex-wrap:wrap;
+     /* flex-direction: column;  */
     justify-content:center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     /* height:100vh; */
 }
 .habit-item{
-    width:100%;
-    border:2px solid red;
+    width:20rem;
+    /* border:2px solid red; */
      height:16em; 
     display: flex;
     flex-direction: column;
 }
+/* .habit-display-container{
+    border:2px 
+} */

@@ -1,0 +1,143 @@
+{
+  "habits": [
+    {
+      "id": 1,
+      "habitname": "Smoking",
+      "habitImage": " https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphoto%2Fno-smoking-sign-gm487253897-38764690&psig=AOvVaw2vGaGrFdUmdIDd-f7h2R8Z&ust=1682801793539000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKi4mq27zf4CFQAAAAAdAAAAABAE",
+      "habitStoppedDay": 28,
+      "habitStoppedMonth": 6,
+      "habitStoppedYear": 2022
+    },
+    {
+      "id": 2,
+      "habitname": "Cycling",
+      "habitImage": " https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fvector%2Fno-bicycle-allowed-sign-gm856987856-141437481&psig=AOvVaw1BPcZkWyypnFMjN1ri6jQN&ust=1682801905869000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLiLp-C7zf4CFQAAAAAdAAAAABAE",
+      "habitStoppedDay": 7,
+      "habitStoppedMonth": 6,
+      "habitStoppedYear": 2022
+    },
+    {
+      "id": 3,
+      "habitname": "Walking",
+      "habitImage": "https://www.vecteezy.com/vector-art/7749078-no-entry-for-people-icon ",
+      "habitStoppedDay": 14,
+      "habitStoppedMonth": 7,
+      "habitStoppedYear": 2022
+    },
+    {
+      "id": 4,
+      "habitname": "Swimming",
+      "habitImage": " https://www.freepik.com/premium-vector/red-no-swimming-sign_32733258.htm#query=no%20swimming&position=11&from_view=keyword&track=robertav1_2_sidr",
+      "habitStoppedDay": 14,
+      "habitStoppedMonth": 7,
+      "habitStoppedYear": 2022
+    },
+    {
+      "id": 5,
+      "habitname": "Clubbing",
+      "habitImage": "https://www.inspiringinterns.com/blog/wp-content/uploads/2017/08/the-ban-on-alcohol-2277764_640.png ",
+      "habitStoppedDay": 27,
+      "habitStoppedMonth": 6,
+      "habitStoppedYear": 2022
+    },
+    {
+      "habitname": "chat",
+      "habitImage": " https://steamuserimages-a.akamaihd.net/ugc/1005898872429397132/819F72E0CD52DA7BDC1B25B37DDF31006F3D71BC/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+      "habitStoppedDay": "11",
+      "habitStoppedMonth": "12",
+      "habitStoppedYear": "2020",
+      "id": 6
+    },
+    {
+      "habitname": "chat",
+      "habitStoppedDay": "11",
+      "habitStoppedMonth": "12",
+      "habitStoppedYear": "2020",
+      "id": 7
+    },
+    {
+      "habitname": "wad",
+      "habitStoppedDay": "11",
+      "habitStoppedMonth": "07",
+      "habitStoppedYear": "2023",
+      "id": 8
+    },
+    {
+      "habitname": "weed",
+      "habitStoppedDay": "11",
+      "habitStoppedMonth": "10",
+      "habitStoppedYear": "2020",
+      "id": 9
+    },
+    {
+      "habitname": "dc",
+      "habitStoppedDay": "12",
+      "habitStoppedMonth": "33",
+      "habitStoppedYear": "2022",
+      "id": 10
+    },
+    {
+      "habitname": "20",
+      "habitStoppedDay": "3",
+      "habitStoppedMonth": "3jjajcac",
+      "habitStoppedYear": "2022",
+      "id": 11
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 12
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 13
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 14
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 15
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 16
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 17
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 18
+    },
+    {
+      "habitname": "",
+      "habitStoppedDay": "",
+      "habitStoppedMonth": "",
+      "habitStoppedYear": "",
+      "id": 19
+    }
+  ]
+}
